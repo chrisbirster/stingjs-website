@@ -1,13 +1,13 @@
-import { createRouter, defineRoutes } from "@solidjs/router";
+import { createRouter } from "@solidjs/router";
 import Home from "./pages/Home";
 import Placeholder from "./pages/Placeholder";
 
-const routes = defineRoutes([
-  { path: "/", component: Home },
-  { path: "/*all", component: Placeholder },
-]);
-
-const SiteRouter = createRouter({ routes });
+const SiteRouter = createRouter({
+  routes: [
+    { path: "/", component: Home },
+    { path: "/*all", component: Placeholder },
+  ],
+});
 
 export default function App() {
   return <SiteRouter />;
